@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CGPA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/cgpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:text="Enter CGPA"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+
+        <EditText
+            android:id="@+id/et4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et3"
+            android:layout_alignStart="@+id/et3"
+            android:layout_alignLeft="@+id/et3"
+            android:layout_alignEnd="@+id/et3"
+            android:layout_alignRight="@+id/et3"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et1"
+            android:layout_alignStart="@+id/et1"
+            android:layout_alignLeft="@+id/et1"
+            android:layout_alignEnd="@+id/et1"
+            android:layout_alignRight="@+id/et1"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cgpa"
+            android:layout_alignStart="@+id/cgpa"
+            android:layout_alignLeft="@+id/cgpa"
+            android:layout_alignEnd="@+id/cgpa"
+            android:layout_alignRight="@+id/cgpa"
+            android:ems="10"
+            android:inputType="numberDecimal">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et2"
+            android:layout_alignStart="@+id/et2"
+            android:layout_alignLeft="@+id/et2"
+            android:layout_alignEnd="@+id/et2"
+            android:layout_alignRight="@+id/et2"
+            android:ems="10"
+            android:inputType="numberDecimal"></EditText>
+
+        <Button
+            android:id="@+id/findbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="FIND"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
