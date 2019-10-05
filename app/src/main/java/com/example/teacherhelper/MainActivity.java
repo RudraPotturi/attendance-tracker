@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent sendIn = new Intent(MainActivity.this, AttendanceActivity.class);
-                    startActivityForResult(sendIn, 2);
+                    startActivityForResult(sendIn, 3);
                 } catch (Exception e) {
 
                 }
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton timetab = findViewById(R.id.cgpa);
+        ImageButton timetab = findViewById(R.id.timetab);
         timetab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton profilebtn = findViewById(R.id.cgpa);
+        ImageButton profilebtn = findViewById(R.id.profilebtn);
         profilebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
