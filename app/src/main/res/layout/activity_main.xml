@@ -27,14 +27,17 @@
         </ImageButton>
 
         <ImageButton
+            android:id="@+id/cgpa"
             android:layout_width="200dp"
-            android:layout_height="200dp">
+            android:layout_height="200dp"
+            android:background="@drawable/gpa">
 
         </ImageButton>
 
         <ImageButton
             android:layout_width="200dp"
-            android:layout_height="200dp">
+            android:layout_height="200dp"
+            android:background="@drawable/timetable">
 
         </ImageButton>
 

@@ -27,5 +27,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ImageButton cgpaimg = findViewById(R.id.cgpa);
+        cgpaimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent sendIn = new Intent(MainActivity.this, CGPA.class);
+                    startActivityForResult(sendIn, 2);
+                } catch (Exception e) {
+
+                }
+            }
+        });
     }
 }
