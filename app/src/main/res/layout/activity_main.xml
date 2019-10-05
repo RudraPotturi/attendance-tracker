@@ -22,28 +22,25 @@
             android:id="@+id/attendance"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            >
+            android:background="@drawable/attendance">
 
         </ImageButton>
 
         <ImageButton
             android:layout_width="200dp"
-            android:layout_height="200dp"
-            >
+            android:layout_height="200dp">
 
         </ImageButton>
 
         <ImageButton
             android:layout_width="200dp"
-            android:layout_height="200dp"
-            >
+            android:layout_height="200dp">
 
         </ImageButton>
 
         <ImageButton
             android:layout_width="200dp"
-            android:layout_height="200dp"
-            >
+            android:layout_height="200dp">
 
         </ImageButton>
     </GridLayout>
