@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button moreMealButton = findViewById(R.id.moreMealsButton);
-        moreMealButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton attendimg = findViewById(R.id.attendance);
+        attendimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
