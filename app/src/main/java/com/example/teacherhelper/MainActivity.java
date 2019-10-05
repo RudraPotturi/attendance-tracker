@@ -40,5 +40,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ImageButton timetab = findViewById(R.id.cgpa);
+        timetab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent sendIn = new Intent(MainActivity.this, Timetable.class);
+                    startActivityForResult(sendIn, 2);
+                } catch (Exception e) {
+
+                }
+            }
+        });
+
+        ImageButton profilebtn = findViewById(R.id.cgpa);
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent sendIn = new Intent(MainActivity.this, Account.class);
+                    startActivityForResult(sendIn, 2);
+                } catch (Exception e) {
+
+                }
+            }
+        });
     }
 }
