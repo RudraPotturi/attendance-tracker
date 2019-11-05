@@ -61,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Intent sendIn = new Intent(MainActivity.this, Account.class);
                     startActivityForResult(sendIn, 2);
+
                 } catch (Exception e) {
+
 
                 }
             }

@@ -73,6 +73,51 @@
             android:layout_alignRight="@+id/et2"
             android:ems="10"
             android:inputType="numberDecimal"></EditText>
+      <EditText
+        android:id="@+id/et8"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_alignStart="@+id/et2"
+        android:layout_alignLeft="@+id/et2"
+        android:layout_alignEnd="@+id/et2"
+        android:layout_alignRight="@+id/et2"
+        android:ems="10"
+        android:inputType="numberDecimal"></EditText>
+      <EditText
+        android:id="@+id/et5"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_alignStart="@+id/et2"
+        android:layout_alignLeft="@+id/et2"
+        android:layout_alignEnd="@+id/et2"
+        android:layout_alignRight="@+id/et2"
+        android:ems="10"
+        android:inputType="numberDecimal"></EditText>
+
+      <EditText
+        android:id="@+id/et6"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_alignStart="@+id/et2"
+        android:layout_alignLeft="@+id/et2"
+        android:layout_alignEnd="@+id/et2"
+        android:layout_alignRight="@+id/et2"
+        android:ems="10"
+        android:inputType="numberDecimal"></EditText>
+      <EditText
+        android:id="@+id/et7"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_alignStart="@+id/et2"
+        android:layout_alignLeft="@+id/et2"
+        android:layout_alignEnd="@+id/et2"
+        android:layout_alignRight="@+id/et2"
+        android:ems="10"
+        android:inputType="numberDecimal"></EditText>
 
         <Button
             android:id="@+id/findbtn"
