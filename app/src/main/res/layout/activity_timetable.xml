@@ -21,7 +21,8 @@
         android:layout_gravity="bottom"
         android:clickable="true"
         android:elevation="5dp"
-        android:src="@drawable/addstudent.png"
         app:backgroundTint="@color/colorPrimary"
-          />
+        />
+<!--        android:src="@drawable/addstudent.png"-->
+
 </RelativeLayout>
