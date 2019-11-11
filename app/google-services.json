@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "356672408740",
+    "firebase_url": "https://teaching-assistant-northwest.firebaseio.com",
+    "project_id": "teaching-assistant-northwest",
+    "storage_bucket": "teaching-assistant-northwest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356672408740:android:183fc7cdba39cb0bcaaa31",
+        "android_client_info": {
+          "package_name": "com.example.teacherhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356672408740-mc738pis4lmgttb8cpin3egrijatp7f7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.teacherhelper",
+            "certificate_hash": "a49161b7e3fbdda193515a0924a1267a219ac95d"
+          }
+        },
+        {
+          "client_id": "356672408740-4db9bk31fejcujuipv4r4gnt8gdc81aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQqwNpD34LXtOikqWkQD2pR5yo-5LQfgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356672408740-4db9bk31fejcujuipv4r4gnt8gdc81aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
