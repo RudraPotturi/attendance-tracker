@@ -38,7 +38,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         if (firebaseAuth.getCurrentUser() != null){
             finish();
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         }
 
         progressDialog = new ProgressDialog(this);
@@ -74,8 +74,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressDialog.dismiss();
                 if(task.isSuccessful()){
+                    Toast.makeText(SignupActivity.this,"Registered Successfully",Toast.LENGTH_SHORT).show();
                     finish();
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
 
                 }else{
                     Toast.makeText(SignupActivity.this,"Registration Failed, Please try again",Toast.LENGTH_SHORT).show();
