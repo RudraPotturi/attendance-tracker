@@ -58,4 +58,39 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="347dp"
+        android:layout_height="26dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textViewSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Not Registered ? Signup"
+            android:textAlignment="center"
+
+            />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Forgot Password"
+            android:textAlignment="center"
+
+            />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
