@@ -32,7 +32,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -78,7 +78,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
                 }else{
-                    Toast.makeText(SignupActivity.this,"Registered Failed, Please try again",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this,"Registration Failed, Please try again",Toast.LENGTH_SHORT).show();
                     return;
                 }
             }
