@@ -29,6 +29,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            case R.id.item1:
+                finish();
+                startActivity(new Intent(this, AboutActivity.class));
+                return true;
+
+            case R.id.item2:
+                finish();
+                startActivity(new Intent(this, HelpActivity.class));
+                return true;
+
             case R.id.item3:
                 firebaseAuth.signOut();
                 finish();
