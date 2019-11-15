@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CGPA">
+    tools:context=".GPA">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,13 +12,13 @@
         android:background="#ffffff">
 
         <TextView
-            android:id="@+id/cgpa"
+            android:id="@+id/gpa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
             android:layout_marginBottom="10dp"
-            android:text="Enter CGPA"
+            android:text="Enter GPA"
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -75,19 +75,7 @@
             android:inputType="numberDecimal">
 
         </EditText>
-      <EditText
-        android:id="@+id/et8"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et2"
-        android:layout_alignStart="@+id/et2"
-        android:layout_alignLeft="@+id/et2"
-        android:layout_alignEnd="@+id/et2"
-        android:layout_alignRight="@+id/et2"
-        android:ems="10"
-        android:inputType="numberDecimal">
 
-      </EditText>
       <EditText
         android:id="@+id/et5"
         android:layout_width="70dp"
@@ -97,49 +85,28 @@
         android:layout_alignLeft="@+id/et2"
         android:layout_alignEnd="@+id/et2"
         android:layout_alignRight="@+id/et2"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
         android:ems="10"
         android:inputType="numberDecimal">
 
       </EditText>
 
-      <EditText
-        android:id="@+id/et6"
-        android:layout_width="70dp"
+      <Button
+        android:id="@+id/findbtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et2"
-        android:layout_alignStart="@+id/et2"
-        android:layout_alignLeft="@+id/et2"
-        android:layout_alignEnd="@+id/et2"
-        android:layout_alignRight="@+id/et2"
-        android:ems="10"
-        android:inputType="numberDecimal">
-      </EditText>
-      <EditText
-        android:id="@+id/et7"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et2"
-        android:layout_alignStart="@+id/et2"
-        android:layout_alignLeft="@+id/et2"
-        android:layout_alignEnd="@+id/et2"
-        android:layout_alignRight="@+id/et2"
-        android:ems="10"
-        android:inputType="numberDecimal">
-
-      </EditText>
-
-        <Button
-            android:id="@+id/findbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/et4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="FIND"
-            android:textColor="#ffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+        android:layout_below="@id/et4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="FIND"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     </RelativeLayout>
 
