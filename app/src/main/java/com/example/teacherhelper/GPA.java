@@ -47,14 +47,10 @@ public class GPA extends AppCompatActivity {
           else if ((sg1>4.0) || (sg2>4.0) || (sg3>4.0) || (sg4>4.0) || (sg5>4.0)){
             Toast.makeText(getApplicationContext(), " Invalid GPA", Toast.LENGTH_SHORT).show();
           }
-          else if ((sg1<0.0) || (sg2<0.0) || (sg3<0.0) || (sg4<0.0) || (sg5<0.0)){
-            Toast.makeText(getApplicationContext(), " Invalid GPA", Toast.LENGTH_SHORT).show();
-          }
+         
           else {
             Intent intent = new Intent(getApplicationContext(), GpaResultActivity.class);
             intent.putExtra("final_gpa", result);
-            intent.putExtra("flag", 0);
-            intent.putExtra("final_percentage", 0);
             startActivity(intent);
           }
 
