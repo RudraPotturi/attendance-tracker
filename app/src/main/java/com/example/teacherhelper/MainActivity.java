@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     try {
-                        Intent sendIn = new Intent(MainActivity.this, CGPA.class);
+                        Intent sendIn = new Intent(MainActivity.this, GPA.class);
                         startActivity(sendIn);
                     } catch (Exception e) {
 
