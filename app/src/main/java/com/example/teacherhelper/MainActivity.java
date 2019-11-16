@@ -110,6 +110,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ImageView notesbtn = findViewById(R.id.notes);
+        notesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent sendIn = new Intent(MainActivity.this, NoteActivity.class);
+                    startActivityForResult(sendIn, 2);
+
+                } catch (Exception e) {
+
+
+                }
+            }
+        });
     }
 
 
