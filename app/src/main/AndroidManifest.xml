@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.example.teacherhelper">
-
-<<<<<<< HEAD
+    package="com.example.teacherhelper">
     <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,46 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoteActivity"></activity>
+        <activity android:name=".GpaResultActivity"></activity>
         <activity android:name=".HelpActivity" />
+        <activity android:name=".NoteActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-=======
-  <application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
-    <activity android:name=".GpaResultActivity"></activity>
-    <activity android:name=".HelpActivity" />
-    <activity android:name=".AboutActivity" />
-    <activity android:name=".ForgotPasswordActivity" />
-    <activity android:name=".SignupActivity" />
-    <activity android:name=".LoginActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
->>>>>>> 2b0e8a957383f3ccafc19fe30d2e79de8275023e
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
-    <activity android:name=".Account" />
-    <activity android:name=".Timetable" />
-    <activity android:name=".GPA" />
-    <activity android:name=".AttendanceActivity" />
-    <activity android:name=".MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Account" />
+        <activity android:name=".Timetable" />
+        <activity android:name=".GPA" />
+        <activity android:name=".AttendanceActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
-  </application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
