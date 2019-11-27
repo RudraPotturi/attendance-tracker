@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ import java.util.UUID;
 public class NoteActivity extends AppCompatActivity {
 
     EditText mTitleEt, mDescriptionEt;
-    Button mSaveBtn;
+    Button mSaveBtn, mListBtn;
 
     ProgressDialog pd;
     FirebaseFirestore db;
@@ -35,6 +36,7 @@ public class NoteActivity extends AppCompatActivity {
         mTitleEt = findViewById(R.id.titleET);
         mDescriptionEt = findViewById(R.id.descriptionET);
         mSaveBtn = findViewById(R.id.saveBtn);
+        mListBtn = findViewById(R.id.listBtn);
 
         pd = new ProgressDialog(this);
         db = FirebaseFirestore.getInstance();
@@ -45,6 +47,14 @@ public class NoteActivity extends AppCompatActivity {
                 String title = mTitleEt.getText().toString().trim();
                 String description = mDescriptionEt.getText().toString().trim();
                 uploadData(title,description);
+            }
+        });
+
+        mListBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NoteActivity.this, ListActivity.class));
+                finish();
             }
         });
     }

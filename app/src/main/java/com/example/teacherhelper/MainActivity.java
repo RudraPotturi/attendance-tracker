@@ -114,14 +114,8 @@ public class MainActivity extends AppCompatActivity {
         notesbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    Intent sendIn = new Intent(MainActivity.this, NoteActivity.class);
-                    startActivityForResult(sendIn, 2);
-
-                } catch (Exception e) {
-
-
-                }
+                startActivity(new Intent(MainActivity.this, ListActivity.class));
+                finish();
             }
         });
     }
