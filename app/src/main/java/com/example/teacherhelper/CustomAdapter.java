@@ -1,6 +1,9 @@
 package com.example.teacherhelper;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +35,7 @@ public class CustomAdapter extends RecyclerView.Adapter<ViewHolder> {
         ViewHolder viewHolder = new ViewHolder(itemView);
         viewHolder.setOnClickListener(new ViewHolder.ClickListener() {
             @Override
-            public void onItemClick(View view, int position) {
+            public void onItemLongClick(View view, int position) {
 
                 String title = modelList.get(position).getTitle();
                 String descr = modelList.get(position).getDescription();
@@ -41,7 +44,30 @@ public class CustomAdapter extends RecyclerView.Adapter<ViewHolder> {
             }
 
             @Override
-            public void onItemLongClick(View view, int position) {
+            public void onItemClick(View view, final int position) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(listActivity);
+                String[] options = {"Update", "Delete"};
+                builder.setItems(options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        if (which == 0){
+                            String id = modelList.get(position).getId();
+                            String title = modelList.get(position).getTitle();
+                            String description = modelList.get(position).getDescription();
+
+                            Intent intent = new Intent(listActivity, NoteActivity.class);
+                            intent.putExtra("pId", id);
+                            intent.putExtra("pTitle", title);
+                            intent.putExtra("pDescription", description);
+
+                            listActivity.startActivity(intent);
+                        }
+                        if (which == 1){
+
+                        }
+                    }
+                }).create().show();
 
             }
         });

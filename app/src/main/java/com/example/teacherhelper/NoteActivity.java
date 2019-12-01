@@ -27,6 +27,7 @@ public class NoteActivity extends AppCompatActivity {
 
     ProgressDialog pd;
     FirebaseFirestore db;
+    String pId, pTitle, pDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +39,40 @@ public class NoteActivity extends AppCompatActivity {
         mSaveBtn = findViewById(R.id.saveBtn);
         mListBtn = findViewById(R.id.listBtn);
 
+        Bundle bundle = getIntent().getExtras();
+        if (bundle!= null){
+            mSaveBtn.setText("Update");
+            pId  = bundle.getString("pId");
+            pTitle = bundle.getString("pTitle");
+            pDescription = bundle.getString("pDescription");
+
+            mTitleEt.setText(pTitle);
+            mDescriptionEt.setText(pDescription);
+        }
+        else {
+            mSaveBtn.setText("Save");
+        }
+
         pd = new ProgressDialog(this);
         db = FirebaseFirestore.getInstance();
 
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String title = mTitleEt.getText().toString().trim();
-                String description = mDescriptionEt.getText().toString().trim();
-                uploadData(title,description);
+
+                Bundle bundle1 = getIntent().getExtras();
+                if (bundle1!=null){
+                    String id = pId;
+                    String title = mTitleEt.getText().toString().trim();
+                    String description = mDescriptionEt.getText().toString().trim();
+                    updateData(id, title, description);
+                }
+                else {
+                    String title = mTitleEt.getText().toString().trim();
+                    String description = mDescriptionEt.getText().toString().trim();
+                    uploadData(title,description);
+                }
+
             }
         });
 
@@ -57,6 +83,27 @@ public class NoteActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void updateData(String id, String title, String description) {
+        pd.setTitle("Updating data");
+        pd.show();
+
+        db.collection("Documents").document(id).update("title", title, "description", description)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                    pd.dismiss();
+                    Toast.makeText(NoteActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                    pd.dismiss();
+                    Toast.makeText(NoteActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void uploadData(String title, String description) {
