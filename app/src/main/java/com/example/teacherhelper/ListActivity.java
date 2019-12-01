@@ -65,6 +65,7 @@ public class ListActivity extends AppCompatActivity {
         db.collection("Documents").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                modelList.clear();
                 pd.dismiss();
                 for (DocumentSnapshot doc: task.getResult()){
                     Model model = new Model(doc.getString("id"), doc.getString("title"), doc.getString("description"));
@@ -84,4 +85,29 @@ public class ListActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void deleteData(int index){
+        pd.setTitle("Deleting Data");
+        pd.show();
+
+        db.collection("Documents").document(modelList.get(index).getId()).delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        pd.dismiss();
+                        Toast.makeText(ListActivity.this,"Deleted", Toast.LENGTH_SHORT).show();
+                        showData();
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(ListActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+    }
+
 }

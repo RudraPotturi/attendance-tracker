@@ -64,7 +64,7 @@ public class CustomAdapter extends RecyclerView.Adapter<ViewHolder> {
                             listActivity.startActivity(intent);
                         }
                         if (which == 1){
-
+                            listActivity.deleteData(position);
                         }
                     }
                 }).create().show();
