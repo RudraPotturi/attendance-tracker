@@ -82,33 +82,6 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
-        ImageView timetab = findViewById(R.id.timetable);
-        timetab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Intent sendIn = new Intent(MainActivity.this, Timetable.class);
-                    startActivityForResult(sendIn, 2);
-                } catch (Exception e) {
-
-                }
-            }
-        });
-
-        ImageView profilebtn = findViewById(R.id.profile);
-        profilebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Intent sendIn = new Intent(MainActivity.this, Account.class);
-                    startActivityForResult(sendIn, 2);
-
-                } catch (Exception e) {
-
-
-                }
-            }
-        });
 
         ImageView notesbtn = findViewById(R.id.notes);
         notesbtn.setOnClickListener(new View.OnClickListener() {

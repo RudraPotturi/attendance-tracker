@@ -27,6 +27,7 @@
             android:id="@+id/et4"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_below="@+id/et3"
             android:layout_alignStart="@+id/et3"
             android:layout_alignLeft="@+id/et3"
@@ -39,6 +40,7 @@
             android:id="@+id/et2"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_below="@+id/et1"
             android:layout_alignStart="@+id/et1"
             android:layout_alignLeft="@+id/et1"
@@ -56,6 +58,8 @@
             android:layout_alignLeft="@+id/cgpa"
             android:layout_alignEnd="@+id/cgpa"
             android:layout_alignRight="@+id/cgpa"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
             android:ems="10"
             android:inputType="numberDecimal">
 
@@ -66,6 +70,7 @@
             android:id="@+id/et3"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_below="@+id/et2"
             android:layout_alignStart="@+id/et2"
             android:layout_alignLeft="@+id/et2"
@@ -77,21 +82,22 @@
         </EditText>
 
       <EditText
-        android:id="@+id/et5"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et2"
-        android:layout_alignStart="@+id/et2"
-        android:layout_alignLeft="@+id/et2"
-        android:layout_alignEnd="@+id/et2"
-        android:layout_alignRight="@+id/et2"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:ems="10"
-        android:inputType="numberDecimal">
+          android:id="@+id/et5"
+          android:layout_width="70dp"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/et2"
+          android:layout_alignStart="@+id/et2"
+          android:layout_alignLeft="@+id/et2"
+          android:layout_alignEnd="@+id/et2"
+          android:layout_alignRight="@+id/et2"
+          android:layout_marginStart="1dp"
+          android:layout_marginLeft="1dp"
+          android:layout_marginTop="91dp"
+          android:layout_marginEnd="0dp"
+          android:layout_marginRight="0dp"
+          android:ems="10"
+          android:inputType="numberDecimal">
 
       </EditText>
 
