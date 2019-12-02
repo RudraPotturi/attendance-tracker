@@ -39,7 +39,7 @@
 
 
         <ImageView
-            android:id="@+id/imageHolder1"
+            android:id="@+id/addStudent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

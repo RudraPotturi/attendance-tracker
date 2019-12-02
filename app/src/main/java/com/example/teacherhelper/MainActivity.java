@@ -91,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        ImageView addbtn = findViewById(R.id.addStudent);
+        addbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RegisterStudentActivity.class));
+                finish();
+            }
+        });
     }
 
 
