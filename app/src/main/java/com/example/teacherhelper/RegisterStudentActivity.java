@@ -4,7 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -31,7 +35,26 @@ public class RegisterStudentActivity extends AppCompatActivity {
     FirebaseFirestore db;
 
 
-    public static ArrayList<String> divisions;
+    public static ArrayList<String> sections;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.common_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item1:
+                finish();
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +68,13 @@ public class RegisterStudentActivity extends AppCompatActivity {
 
 
 
-        divisions = new ArrayList<>();
-        divisions.add("S1 MORNING CLASS");
-        divisions.add("S2 MID CLASS");
-        divisions.add("S3 NOON CLASS");
+        sections = new ArrayList<>();
+        sections.add("S1 MORNING CLASS");
+        sections.add("S2 MID CLASS");
+        sections.add("S3 NOON CLASS");
 
         spinner = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, divisions);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, sections);
         spinner.setAdapter(adapter);
 
         pd = new ProgressDialog(this);
