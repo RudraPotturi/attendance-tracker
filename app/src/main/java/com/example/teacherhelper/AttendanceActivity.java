@@ -34,7 +34,7 @@ public class AttendanceActivity extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
 
     Spinner spinner;
-    Button loadButton;
+    Button loadButton, buttonSaveAttendance;
 
     FirebaseFirestore db;
     AttendanceAdapter adapter;
@@ -79,6 +79,7 @@ public class AttendanceActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recycler_view);
         loadButton = findViewById(R.id.loadButton);
+        buttonSaveAttendance = findViewById(R.id.buttonSaveAttendance);
         mRecyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -90,6 +91,19 @@ public class AttendanceActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showData();
+            }
+        });
+
+
+        buttonSaveAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            pd.setTitle("Saving Data");
+            pd.show();
+            Toast.makeText(getApplicationContext(), "Attendance Marked", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+
             }
         });
 
