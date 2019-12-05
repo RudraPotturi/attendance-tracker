@@ -119,8 +119,10 @@ public class AttendanceActivity extends AppCompatActivity {
                 modelList.clear();
                 pd.dismiss();
                 for (DocumentSnapshot doc: task.getResult()){
-                    AttendanceModel model = new AttendanceModel(doc.getString("id"), doc.getString("firstName"));
-                    modelList.add(model);
+                    if(doc.getString("section").equals(spinner.getSelectedItem().toString())){
+                        AttendanceModel model = new AttendanceModel(doc.getString("id"), doc.getString("firstName"));
+                        modelList.add(model);
+                    }
                 }
 
                 adapter = new AttendanceAdapter(AttendanceActivity.this, modelList);
