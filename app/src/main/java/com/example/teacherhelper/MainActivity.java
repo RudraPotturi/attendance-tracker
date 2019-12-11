@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.item2:
                 finish();
-                startActivity(new Intent(this, HelpActivity.class));
+                startActivity(new Intent(this, CheckActivity.class));
                 return true;
 
             case R.id.item3:

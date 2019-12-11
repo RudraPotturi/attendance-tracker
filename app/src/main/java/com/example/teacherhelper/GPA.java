@@ -3,6 +3,7 @@ package com.example.teacherhelper;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +15,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class GPA extends AppCompatActivity {
+
+
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
@@ -40,6 +43,7 @@ public class GPA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpa);
+        getSupportActionBar().setTitle("GPA");
 
 
       Button btn =(Button) findViewById(R.id.findbtn);

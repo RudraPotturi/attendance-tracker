@@ -60,6 +60,7 @@ public class RegisterStudentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_student);
+        getSupportActionBar().setTitle("Student Registration");
 
         mFirstName = findViewById(R.id.first_name);
         mLastName = findViewById(R.id.last_name);

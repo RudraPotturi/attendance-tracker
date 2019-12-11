@@ -33,6 +33,7 @@ public class NoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
+        getSupportActionBar().setTitle("NOTES");
 
         mTitleEt = findViewById(R.id.titleET);
         mDescriptionEt = findViewById(R.id.descriptionET);
